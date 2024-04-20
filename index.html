@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start page</title>
+
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+          Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 12px;
+
+        & > .content {
+          & > h2 {
+            padding: 32px 0 0 0;
+            margin: 0 0 6px 0;
+          }
+
+          & > div {
+            display: flex;
+            margin: 0 0 32px 0;
+            width: 100%;
+            max-width: 1000px;
+
+            & > div {
+              flex: 1;
+              margin: 0 12px 0 0;
+              padding: 0 0 0 2px;
+
+              & > b {
+                display: block;
+                margin: 0 0 10px 1px;
+              }
+
+              & > div > a {
+                color: black;
+                padding: 5px 8px 6px 8px;
+                margin: 0 2px 0 0;
+                line-height: 2.3rem;
+                border: 1px solid #d6d6d6;
+                border-radius: 0.25em;
+                text-decoration: none;
+                white-space: nowrap;
+                font-size: 10pt;
+              }
+            }
+          }
+        }
+      }
+
+      .hotkeys {
+        font-size: 10pt;
+        font-family: monospace;
+        color: #545454;
+        transition: color;
+        line-height: 1rem;
+        margin-top: 64px;
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      .hotkeys:hover {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content-container">
+      <div class="content">
+        <h1>Start Page</h1>
+
+        <div>
+          <div>
+            <b>Common</b>
+            <div>
+              <a href="https://news.ycombinator.com">Hacker News</a>
+              <a href="https://lobste.rs/">Lobste.rs</a>
+              <a href="https://en.m.wikipedia.org/wiki/Main_Page">Wikipedia</a>
+              <a href="https://unsplash.com/">Unsplash</a>
+              <a href="https://www.dropbox.com/login">Dropbox</a>
+              <a href="https://www.wolframalpha.com/">Wolfram Alpha</a>
+              <a href="https://app.diagrams.net/">Draw.io</a>
+              <a href="https://excalidraw.com/">Excalidraw</a>
+              <a href="https://www.tldraw.com/">tldraw</a>
+              <a href="https://trello.com">Trello</a>
+            </div>
+          </div>
+          <div>
+            <b>Social</b>
+            <div>
+              <a href="https://mastodon.social/home">Mastodon</a>
+              <a href="https://app.slack.com/client/">Slack</a>
+              <a href="https://www.linkedin.com/">LinkedIn</a>
+              <a href="https://web.telegram.org/">Telegram</a>
+              <a href="https://discordapp.com/activity">Discord</a>
+              <a href="https://web.whatsapp.com">WhatsApp</a>
+              <a href="https://www.messenger.com">Messenger</a>
+              <a href="https://www.facebook.com">Facebook</a>
+              <a href="https://www.reddit.com/">Reddit</a>
+              <a href="https://www.instagram.com/">Instagram</a>
+              <a href="https://www.threads.net/">Threads</a>
+            </div>
+          </div>
+
+          <div>
+            <b>Weather</b>
+            <div>
+              <a href="https://www.ilmatieteenlaitos.fi/">Ilmatieteenlaitos</a>
+              <a href="https://www.ilmatieteenlaitos.fi/sade-ja-pilvialueet">Sadealueet</a>
+              <a href="http://ilmatieteenlaitos.fi/saa/helsinki">Helsinki</a>
+              <a href="https://ilmatieteenlaitos.fi/saa/tampere">Tampere</a>
+              <a href="https://www.ilmatieteenlaitos.fi/saa/turku">Turku</a>
+              <a href="http://ilmatieteenlaitos.fi/saa/oulu">Oulu</a>
+              <a href="https://www.ilmatieteenlaitos.fi/saa/rovaniemi">Rovaniemi</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <b>Google</b>
+            <div>
+              <a href="https://www.google.fi">Google</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+              <a href="https://drive.google.com/drive/my-drive">Drive</a>
+              <a href="https://docs.google.com/">Docs</a>
+              <a href="https://docs.google.com/presentation/u/0/">Slides</a>
+              <a href="https://docs.google.com/spreadsheets/u/0/">Sheets</a>
+              <a href="https://photos.google.com">Photos</a>
+              <a href="https://calendar.google.com/calendar">Calendar</a>
+              <a href="https://www.google.fi/maps">Maps</a>
+              <a href="https://translate.google.com">Translate</a>
+              <a href="https://news.google.com/news/">News</a>
+              <a href="https://contacts.google.com">Contacts</a>
+              <a href="https://chat.google.com/">Chat</a>
+              <a href="https://meet.google.com/_meet">Meet</a>
+              <a href="https://www.youtube.com/?gl=FI">YouTube</a>
+              <a href="https://fonts.google.com/">Fonts</a>
+            </div>
+          </div>
+          <div>
+            <b>Microsoft</b>
+            <div>
+              <a href="https://myapps.microsoft.com/">MyApps</a>
+              <a href="https://www.office.com/?auth=2">Portal</a>
+              <a href="https://outlook.office365.com/mail/inbox">Outlook</a>
+              <a href="https://teams.microsoft.com/">Teams</a>
+              <a href="https://www.office.com/launch/word?auth=2">Word</a>
+              <a href="https://portal.azure.com/">Azure Portal</a>
+              <a href="https://dev.azure.com">Azure Devops</a>
+              <a href="https://bing.com">Bing</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <b>News</b>
+            <div>
+              <a href="http://yle.fi/uutiset">Yle Uutiset</a>
+              <a href="http://yle.fi/uutiset/osasto/news/">Yle News</a>
+              <a href="http://www.hs.fi/">Helsingin Sanomat</a>
+              <a href="https://www.iltalehti.fi/">Iltalehti</a>
+              <a href="https://www.is.fi/">Ilta-sanomat</a>
+              <a href="http://www.kaleva.fi/">Kaleva</a>
+              <a href="http://arstechnica.com/">Ars Technica</a>
+              <a href="http://www.theverge.com/">The Verge</a>
+              <a href="http://www.anandtech.com/">AnandTech</a>
+              <a href="https://www.io-tech.fi">io-tech</a>
+              <a href="http://allthingsd.com/">All Things Digital</a>
+              <a href="http://recode.net/">ReCode</a>
+              <a href="http://www.techpowerup.com/">TechPowerUp</a>
+              <a href="https://techreport.com">The Tech Report</a>
+              <a href="https://slashdot.org">Slashdot</a>
+              <a href="https://theoutline.com">The Outline</a>
+              <a href="http://www.theguardian.com/uk">The Guardian</a>
+            </div>
+          </div>
+          <div>
+            <b>Dev</b>
+            <div>
+              <a href="https://github.com/">Github</a>
+              <a href="https://about.gitlab.com/">GitLab</a>
+              <a href="https://stackoverflow.com/">Stack Overflow</a>
+              <a href="https://react.dev/reference/react">React</a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web">MDN</a>
+              <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/">C#</a>
+              <a href="https://v5.humaan.co/checklist/">Website checklist</a>
+              <a href="https://codepen.io/">Codepen</a>
+              <a href="https://regexr.com">Regexr</a>
+              <a href="https://www.wireshark.org/tools/oui-lookup.html">Wireshark OUI lookup</a>
+              <a href="https://mooc.fi/">Mooc</a>
+              <a href="https://fullstackopen.com">Fullstack Open</a>
+              <a href="https://ndpsoftware.com/git-cheatsheet.html#loc=index;">Git cheatsheet</a>
+              <a href="https://books.goalkicker.com/">GoalKicker: Notes for professionals</a>
+              <a href="https://formito.com/tools/favicon">Favicon generator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotkeys">
+        <b>Hotkeys</b>
+        <div id="hotkeys"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let presses = [];
+
+    const debounce = (mainFunction, delay) => {
+      let timer;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          mainFunction(...args);
+        }, delay);
+      };
+    };
+
+    const debouncedClearPresses = debounce(() => {
+      presses = [];
+    }, 300);
+
+    const debouncedGoTo = debounce((url) => {
+      window.location.href = url;
+    }, 100);
+
+    const hotkeys = {
+      h: { name: "Hacker News", url: "https://news.ycombinator.com/" },
+      l: { name: "Lobste.rs", url: "https://lobste.rs/" },
+      w: {
+        name: "Wikipedia",
+        url: "https://en.m.wikipedia.org/wiki/Main_Page",
+      },
+      "y y": { name: "YouTube", url: "https://www.youtube.com/" },
+      "g g": { name: "Google", url: "https://google.com" },
+      "g m": { name: "Gmail", url: "https://mail.google.com/mail/u/0/#inbox" },
+      "g m m": { name: "Maps", url: "https://www.google.fi/maps" },
+    };
+
+    const renderHotkeys = () => {
+      const keys = Object.keys(hotkeys);
+      const lines = keys
+        .map((k) => {
+          return `${k}: ${hotkeys[k].name}`;
+        })
+        .join("\n");
+
+      document.getElementById("hotkeys").innerText = lines;
+    };
+
+    renderHotkeys();
+
+    function handleShortcut(event) {
+      const pressedKey = event.key;
+      presses.push(pressedKey);
+      const joinedPresses = presses.join(" ");
+      const found = hotkeys[joinedPresses];
+
+      if (found) {
+        event.preventDefault();
+        debouncedGoTo(found.url);
+      }
+      debouncedClearPresses();
+    }
+
+    document.addEventListener("keydown", handleShortcut);
+  </script>
+</html>
