@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23fafafa%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2260%22>🧭</text></svg>"
+    />
+    <title>Start page</title>
+
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 12px;
+
+        & > .content {
+          width: 100%;
+          max-width: 1000px;
+          & > h2 {
+            padding: 32px 0 0 0;
+            margin: 0 0 6px 0;
+          }
+
+          & > div {
+            display: flex;
+            margin: 0 0 32px 0;
+
+            & > div {
+              flex: 1;
+              margin: 0 12px 0 0;
+              padding: 0 0 0 2px;
+
+              & > b {
+                display: block;
+                margin: 0 0 10px 1px;
+              }
+
+              & > div > a {
+                color: black;
+                padding: 5px 8px 6px 8px;
+                margin: 0 2px 0 0;
+                line-height: 2.3rem;
+                border: 1px solid #d6d6d6;
+                border-radius: 0.25em;
+                text-decoration: none;
+                white-space: nowrap;
+                font-size: 10pt;
+              }
+            }
+          }
+        }
+      }
+
+      .hotkeys {
+        font-size: 10pt;
+        font-family: monospace;
+        color: #545454;
+        transition: color;
+        line-height: 1rem;
+        margin-top: 64px;
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      .hotkeys:hover {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content-container">
+      <div class="content">
+        <h1>Start Page</h1>
+
+        <div>
+          <div>
+            <b>Example</b>
+            <div>
+              <a href="https://news.ycombinator.com">Hacker News</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotkeys">
+        <b>Hotkeys</b>
+        <div id="hotkeys"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let presses = [];
+
+    const debounce = (mainFunction, delay) => {
+      let timer;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          mainFunction(...args);
+        }, delay);
+      };
+    };
+
+    const debouncedClearPresses = debounce(() => {
+      presses = [];
+    }, 300);
+
+    const debouncedGoTo = debounce((url) => {
+      window.location.href = url;
+    }, 100);
+
+    const hotkeys = {
+      h: { name: "Hacker News", url: "https://news.ycombinator.com/" },
+    };
+
+    const renderHotkeys = () => {
+      const keys = Object.keys(hotkeys);
+      const lines = keys
+        .map((k) => {
+          return `${k}: ${hotkeys[k].name}`;
+        })
+        .join("\n");
+
+      document.getElementById("hotkeys").innerText = lines;
+    };
+
+    renderHotkeys();
+
+    function handleShortcut(event) {
+      const pressedKey = event.key;
+      presses.push(pressedKey);
+      const joinedPresses = presses.join(" ");
+      const found = hotkeys[joinedPresses];
+
+      if (found) {
+        event.preventDefault();
+        debouncedGoTo(found.url);
+      }
+      debouncedClearPresses();
+    }
+
+    document.addEventListener("keydown", handleShortcut);
+  </script>
+</html>
